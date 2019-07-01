@@ -1,0 +1,22 @@
+{% extends "base_generic.html" %}
+
+{% block title %}<title>Домашняя страница</title>{% endblock %}
+
+{% block content %}
+<h1>Мой личный блог</h1>
+
+  <p>Добро пожаловать в <em>мой блог</em>- очень простой сайт на Django</p>
+
+<h2>Обновляющийся контент</h2>
+
+  
+  <ul>
+    <li><strong>Статьи:</strong> {{ num_articles }}</li>
+    <li><strong>Авторы:</strong> {{ num_authors }}</li>
+  
+    
+
+    <p><strong>Вы заходите на эту страницу {{num_visits}}{% if num_visits == 1 %} раз{% else %} раз{% endif %}.</strong></p>
+  </ul>
+
+{% endblock %}
