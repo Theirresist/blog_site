@@ -14,7 +14,7 @@ class Author(models.Model):
     first_name = models.CharField(max_length = 30)
     second_name = models.CharField(max_length = 30)
     date_of_birth = models.DateField(null = True, blank = True)
-    name = str(first_name) + '' + str(second_name)
+    
 
     def display_category(self):
         return ', '.join([ category.name for category in self.category.all()[:3] ])
@@ -23,7 +23,7 @@ class Author(models.Model):
 
 
     def __str__(self):
-        return self.name
+        return '%s, %s' % (self.last_name, self.first_name)
     
     def get_absolute_url(self):
         return reverse('author-detail', args = [str(self.id)]) 
