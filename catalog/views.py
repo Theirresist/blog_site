@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Category, Author, Article
+from .models import Genre, Author, Article
 from django.views import generic
 
 
